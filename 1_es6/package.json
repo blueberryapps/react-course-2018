@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^22.0.6"
   },
   "scripts": {
@@ -11,6 +12,9 @@
   },
   "jest": {
     "testRegex": "./.*\\.js$",
-    "testPathIgnorePatterns": ["./lib/", "node_modules"]
+    "testPathIgnorePatterns": [
+      "./lib/",
+      "node_modules"
+    ]
   }
 }
