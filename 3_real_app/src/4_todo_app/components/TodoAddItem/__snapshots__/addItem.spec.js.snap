@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Item renders correctly 1`] = `
+<div>
+  <label>
+    New Item
+    <input
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </label>
+</div>
+`;
