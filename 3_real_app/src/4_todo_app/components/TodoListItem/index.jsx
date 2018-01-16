@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon, ListItem, ListItemAction, ListItemContent } from 'react-mdl';
 import './style.css';
 
 export default class TodoListItem extends React.Component {
@@ -20,19 +19,14 @@ export default class TodoListItem extends React.Component {
     const { item } = this.props;
 
     return (
-      <ListItem>
-        <ListItemAction
+      <li>
+        <button
           onClick={this.removeItem}
-          className="remove-todo-item"
-        >
-          <Icon
-            name="delete"
-          />
-        </ListItemAction>
-        <ListItemContent>
+          className="remove-todo-item">Delete</button>
+        <span>
           {item}
-        </ListItemContent>
-      </ListItem>
+        </span>
+      </li>
     );
   }
 }

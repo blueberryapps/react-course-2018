@@ -22,9 +22,9 @@ const person = new Person('John', 'Smith');
 
 it('has name', () => {
   expect(person.name).toEqual('John');
-})
+});
 
 it('has name', () => {
   expect(person.getUserName()).toEqual('John Smith');
-})
+});
 

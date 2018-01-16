@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cell, List } from 'react-mdl';
 import TodoListItem from '../TodoListItem/index';
+import './index.css'
 
 export default class TodoList extends React.Component {
   static propTypes = {
@@ -13,14 +13,14 @@ export default class TodoList extends React.Component {
     const { items, remove } = this.props;
 
     return (
-      <Cell col={12}>
-        <List>
+      <div>
+        <ul className="list">
           {items.map((item, index) => (
               <TodoListItem remove={remove} item={item} key={index} id={index} />)
             )
           }
-        </List>
-      </Cell>
+        </ul>
+      </div>
     );
   }
 }

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Grid } from 'react-mdl';
 import PropTypes from 'prop-types';
 import AddItem from '../TodoAddItem/index';
 import List from '../TodoList/index';
@@ -10,10 +9,10 @@ const ListContainer = (props) => {
   const { todos, deleteTodoItem, addTodoItem } = props;
 
   return (
-    <Grid>
+    <div>
       <AddItem add={addTodoItem} />
       <List items={todos} remove={deleteTodoItem} />
-    </Grid>
+    </div>
   );
 };
 

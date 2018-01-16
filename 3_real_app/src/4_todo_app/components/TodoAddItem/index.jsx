@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Cell, Textfield } from 'react-mdl';
 
 export default class AddItem extends React.Component {
   static propTypes = {
@@ -24,9 +23,9 @@ export default class AddItem extends React.Component {
   };
 
   handleSubmit = (e) => {
-    if (e.keyCode === 13) {
+    const { value } = this.state;
+    if (e.keyCode === 13 && value) {
       const { add } = this.props;
-      const { value } = this.state;
 
       add(value);
       this.setState({
@@ -39,15 +38,17 @@ export default class AddItem extends React.Component {
     const { value } = this.state;
 
     return (
-      <Cell col={12}>
-        <Textfield
-          type="text"
-          onChange={this.onChange}
-          value={value}
-          onKeyDown={this.handleSubmit}
-          label="New Item"
-        />
-      </Cell>
+      <div>
+        <label>New Item
+          <input
+            type="text"
+            onChange={this.onChange}
+            value={value}
+            onKeyDown={this.handleSubmit}
+            required
+          />
+        </label>
+      </div>
     );
   }
 }

@@ -1,14 +1,17 @@
 /* eslint-disable */
-import 'react-mdl/extra/material';
 import React from 'react';
 import { mount } from 'enzyme'
 import AddItem from './index.jsx';
+import renderer from 'react-test-renderer';
+
 
 describe('Add Item', () => {
 
-  it('renders component properly', () => {
-    const wrapper = mount(<AddItem add={()=>{}} />);
-    expect(wrapper.find('input').length).toEqual(1)
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(<AddItem add={() => {}} />)
+        .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('should change value', () => {
