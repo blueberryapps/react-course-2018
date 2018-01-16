@@ -2,7 +2,7 @@
 
 
 ## Run Project
-`MODE=refactor yarn start`
+`yarn start`
 
 ## Tasks
 
@@ -13,5 +13,5 @@
 5. You should have at least 3 components. (Recommendation: create dump component of posts list. It will be useful in next task.)
 6. Implement filter feature
 
-##**Bonus (optional)**
+## **Bonus (optional)**
 6. Implement pagination

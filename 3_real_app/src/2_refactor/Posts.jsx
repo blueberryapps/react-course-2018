@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { PropTypes } from 'react';
-import SomeUnusedClass from '../4_todo_app/index';
-import Box from '../4_todo_app/index';
-import { Grid, Cell, Textfield, Button } from 'react-mdl';
+import SomeUnusedClass from '../5_todo_app/index';
+import Box from '../5_todo_app/index';
 import fetch from 'isomorphic-fetch';
 
 export default class BadNameForClassYouCanCreateBetter extends React.Component {
@@ -47,9 +46,9 @@ export default class BadNameForClassYouCanCreateBetter extends React.Component {
     });
   }
 
-  componentWillUpdate() {
-    console.log('------------- Working?');
-  }
+  // componentWillUpdate() {
+  //   console.log('------------- Working?');
+  // }
 
   filter() {
     // TODO: create filter feature
@@ -63,17 +62,17 @@ export default class BadNameForClassYouCanCreateBetter extends React.Component {
     var posts = this.state.posts || [];
     var value = this.state.value || '';
     return (
-      <Grid>
-        <Cell col={12}>
+      <div>
+        <div>
           <h1>My posts</h1>
-        </Cell>
-        <Cell col={6}><Textfield label="Search" onChange={this.onChange} value={value} /></Cell>
-        <Cell col={6}><Button onClick={this.filter} raised colored>Filter</Button></Cell>
-        <Cell col={12}> {posts.map(function (post) {
+        </div>
+        <div><label>Search</label><input onChange={this.onChange} value={value} /></div>
+        <div><button onClick={this.filter}>Filter</button></div>
+        <div> {posts.map(function (post) {
           return (<div><h2>{post.title}</h2><p>{post.body}</p></div>)
         })}
-        </Cell>
-      </Grid>
+        </div>
+      </div>
     );
   }
 }
