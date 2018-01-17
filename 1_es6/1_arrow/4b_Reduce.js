@@ -1,5 +1,5 @@
 /*
-* 4b. Refactor this forEach to get
+* 4b. Refactor this forEach to transform object (reduce will help)
 **/
 
 const persons = [
@@ -20,4 +20,4 @@ it('returns hashed persons by ids', () => {
     '2': 'Alex',
     '3': 'Marina'
   })
-})
+});
