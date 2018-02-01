@@ -5,8 +5,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 
-import SimpleRefactor from './1_simple_refactor/Example';
-import Posts from './2_refactor/Posts';
+import SimpleRefactor from './1_simple_refactor/solution/Example';
+import Posts from './2_refactor/solution/Posts';
 import Router from './3_router/Router';
 import SimplestRedux from './4_simplest_redux';
 import Todo from './5_todo_app';
